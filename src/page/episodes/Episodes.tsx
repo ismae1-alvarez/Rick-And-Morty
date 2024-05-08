@@ -44,9 +44,9 @@ function Episodes() {
             </div>
           </form>
 
-          <section className="flex flex-nowrap">
+          <section className="flex flex-wrap">
             {/* Status */}
-            <div className="relative flex items-center  justify-center text-xl p-3">
+            <div className="relative flex-wrap flex items-center  justify-center text-xl p-3">
               <select  onChange={(e)=> setFilter(e.target.value as typeof filter)}   className="appearance-none border border-gray-300 rounded-xl px-10 bg-white focus:outline-none focus:border-blue-500 h-full py-2">
                 {/* <option value="" disabled hidden>Status</option> */}
                 <option value="All">All Status</option>
@@ -58,7 +58,7 @@ function Episodes() {
             </div>
             
             {/* Gender */}
-            <div className="relative flex items-center  justify-center text-xl p-3">
+            <div className="relative flex-wrap flex items-center  justify-center text-xl p-3">
               <select onChange={(e) => setfilterGender(e.target.value as typeof filterGender)} className="appearance-none border border-gray-300 rounded-xl px-10 bg-white focus:outline-none focus:border-blue-500 h-full py-2">
                 <option value="All">All Gender</option>
                 <option value="Female">Female</option>
@@ -69,7 +69,7 @@ function Episodes() {
             </div>
 
               {/* Species */}
-              <div className="relative flex items-center  justify-center text-xl p-3">
+              <div className="relative  flex-wrap flex items-center  justify-center text-xl p-3">
               <select  onChange={(e)=> setSpeciesFilter(e.target.value as typeof speciesFilter)}  defaultValue="1" className="appearance-none border border-gray-300 rounded-xl px-10 bg-white focus:outline-none focus:border-blue-500 h-full py-2">
                 <option value="All">All Species</option>
                 <option value="Human">Human</option>

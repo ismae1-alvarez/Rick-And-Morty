@@ -45,9 +45,9 @@ function Location() {
           </form>
             
 
-          <section className='flex flex-nowrap w-full md:w-fit justify-between'>
+          <section className='flex flex-wrap w-full md:w-fit justify-between'>
             {/* Status */}
-            <div className="relative flex items-center  justify-center text-xl p-3">
+            <div className="relative flex-wrap flex items-center  justify-center text-xl p-3">
               <select  onChange={(e)=> setFilter(e.target.value as typeof filter)}   className="appearance-none border border-gray-300 rounded-xl px-10 bg-white focus:outline-none focus:border-blue-500 h-full py-2">
                 <option value="All">All Status</option>
                 <option value="Alive">Alive</option>
@@ -58,7 +58,7 @@ function Location() {
             </div>
             
             {/* Gender */}
-            <div className="relative flex items-center  justify-center text-xl p-3">
+            <div className="relative flex-wrap flex items-center  justify-center text-xl p-3">
               <select onChange={(e) => setfilterGender(e.target.value as typeof filterGender)} className="appearance-none border border-gray-300 rounded-xl px-10 bg-white focus:outline-none focus:border-blue-500 h-full py-2">
                 <option value="All">Alll Gender</option>
                 <option value="Female">Female</option>
@@ -69,7 +69,7 @@ function Location() {
             </div>
 
             {/* Species */}
-            <div className="relative flex items-center  justify-center text-xl p-3">
+            <div className="relative flex-wrap flex items-center  justify-center text-xl p-3">
               <select  onChange={(e)=> setSpeciesFilter(e.target.value as typeof speciesFilter)}  defaultValue="1" className="appearance-none border border-gray-300 rounded-xl px-10 bg-white focus:outline-none focus:border-blue-500 h-full py-2">
                 <option value="All">All Species</option>
                 <option value="Human">Human</option>
