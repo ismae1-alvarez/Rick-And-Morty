@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
 import 'tailwindcss/tailwind.css'
 function NavBar() {
 
@@ -16,9 +17,9 @@ function NavBar() {
             
             <nav className={`${menu ? 'h-72 opacity-100' : 'h-0 opacity-0'} opacity-100 md:h-fit overflow-hidden transition-all duration-500 ease-linear gap-10 md:w-fit flex-nowrap w-full justify-center items-center`}>
             <ul className='flex flex-col md:flex-row gap-8 w-full text-xl justify-center items-center'>
-                <li className='my-5'><a href="/">Location</a></li>
-                <li className='my-5'><a href="/characters">Characters</a></li>
-                <li className='my-5'><a href="/episodes">Episodes</a></li>
+                <li className='my-5'><Link to="/">Location</Link></li>
+                <li className='my-5'><Link to="/characters">Characters</Link></li>
+                <li className='my-5'><Link  to="/episodes">Episodes</Link></li>
             </ul>
             </nav>
         </header>
