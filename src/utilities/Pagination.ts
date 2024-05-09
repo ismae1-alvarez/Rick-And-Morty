@@ -1,8 +1,12 @@
-function Pagination() {
-  let page
+function Pagination(limit:string) {
 
-  
 
-  return page 
+   const values = Number(limit);
+
+   const valuesNumber = Math.floor(Math.random() * (values - 1)) + 1;
+ 
+   const valuesText = valuesNumber.toString();
+ 
+   return valuesText;
 }
 export default Pagination

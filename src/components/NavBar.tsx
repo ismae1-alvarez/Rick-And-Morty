@@ -8,9 +8,9 @@ function NavBar() {
    <Fragment>
         <header className=" flex justify-between flex-wrap items-center p-5 font-thin border-b-2 border-[#f1f1f1] shadow-lg w-full ">
             {/* <h1 className="text-black md:text-gray-400 text-2xl"><a href="">Medium breakpoint</a></h1> */}
-            <a href="#">
+            <Link to="/">
                 <img src="/img/logo.png" className='h-10 w-10' alt="" />
-            </a>
+            </Link>
             <button onClick={()=> setMenu(!menu)} className='md:hidden flex flex-wrap'>
                 <img src="/img/menu.svg" className='h-8 w-8' alt="menu-bars" />
             </button>

@@ -1,11 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import useFetch from '../hook/useFetch';
 import Hader from '../components/NavBar';
 import ResidentCard from '../components/ResidentsCard';
 import LocationCard from '../components/LocationCard'
+import Pagination from '../utilities/Pagination';
+import IsLogin from '../components/isLogin/IsLogin';
 
 function Location() {
-    const [locationId, setLocationId] = useState('9');
+    const [locationId, setLocationId] = useState(Pagination("126"));
     const [filter, setFilter] = useState<'Alive' | 'Dead' | 'Unknown' | 'All'>('All')
     const [filterGender, setfilterGender] = useState<'Female'| 'Male' | 'unknown' | 'All'>("All")
     const [speciesFilter, setSpeciesFilter] = useState<'All' | 'Human'|'Humanoid' | 'Poopybutthole' | 'Mythological' | 'Unknown' | 'Animal'|'Disease' |'Planet' |'Robot' 
@@ -94,7 +96,17 @@ function Location() {
 
 
           {hasError ? (
-            <h3 className='p-5'>Hey! Debes proporcionar un ID entre 1 y 126.</h3>
+            <Fragment>
+            <h3 className='p-5 text-center text-3xl font-thin'>Hey! Debes proporcionar un ID entre 1 y 126.</h3>
+            <div className='flex justify-center items-center h-screen '>
+              <div className='w-full flex flex-col gap-5 max-w-xs mx-auto'> 
+                <IsLogin />
+                <IsLogin />
+                <IsLogin />
+              </div>
+            </div>
+          </Fragment>
+          
           ) : (
 
             <>
@@ -104,10 +116,9 @@ function Location() {
                   <ResidentCard key={url} url={url} filter={filter} filterGender={filterGender} speciesFilter={speciesFilter}/>
                 ))}
               </div>
-              {/* <IsLogin/> */}
             </>
           )}
       </div>
     );
-}
-export default Location
+  }
+  export default Location
